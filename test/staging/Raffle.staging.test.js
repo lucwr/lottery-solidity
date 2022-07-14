@@ -43,13 +43,13 @@ developmentChains.includes(network.name)
                               reject(e);
                           }
                       });
-                  });
 
-                  console.log("Entering Raffle...");
-                  const tx = await raffle.enterRaffle({ value: raffleEntranceFee });
-                  await tx.wait(1);
-                  console.log("Ok, time to wait...");
-                  const winnerStartingBalance = await accounts[0].getBalance();
+                      console.log("Entering Raffle...");
+                      const tx = await raffle.enterRaffle({ value: raffleEntranceFee });
+                      await tx.wait(1);
+                      console.log("Ok, time to wait...");
+                      const winnerStartingBalance = await accounts[0].getBalance();
+                  });
               });
           });
       });
